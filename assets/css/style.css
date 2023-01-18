@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* font-family: 'Roboto'; */
+/* ====== Colors ======= */
+/* ====== Font ====== */
+/* ====== Margin ====== */
+/* =================== General Styles ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto";
+  color: #0b0c17;
+  max-width: 1400px;
+}
+
+h1 {
+  font-size: clamp(4.2rem, 5vw, 7rem);
+}
+
+h2 {
+  font-size: clamp(4rem, 4vw, 5.5rem);
+}
+
+h3 {
+  font-size: 1.9rem;
+}
+
+p {
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+h3 img, p img {
+  width: 3rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ======================= Classes ==================== */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* =============== Desktop Styles  ==============*/
+header > img:nth-child(1) {
+  width: 55%;
+  margin-left: auto;
+  position: absolute;
+  left: 45%;
+  left: clamp(360px, 45%, 629px);
+  z-index: -1;
+}
+header #logo {
+  grid-template-columns: repeat(2, auto);
+  width: 28rem;
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+}
+header #logo img {
+  margin: auto;
+  width: 4rem;
+}
+header #logo div {
+  width: 20rem;
+}
+header #logo div p:nth-child(1) {
+  font-size: 1.9rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  word-spacing: -1px;
+}
+header #logo div p:nth-child(2) {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+header #hero {
+  margin-left: 7vw;
+  margin-right: 7vw;
+  padding-top: 7vw;
+}
+header #hero article {
+  justify-content: end;
+  gap: 2.5rem;
+}
+header #hero article p {
+  font-size: 1.9rem;
+}
+header #hero #img-container_floating-man {
+  padding-left: 10px;
+}
+header #scroll-link {
+  color: #ff3571;
+  font-size: 1.4rem;
+  display: block;
+  margin: 7vw;
+}
+header > img:last-of-type {
+  margin-bottom: 7vw;
+}
+
+/* ===================== Main =========================== */
+main {
+  margin-left: 7vw;
+  margin-right: 7vw;
+  gap: 7vw;
+  /* h2 'After several weeks...' */
+}
+main #section_everyIdea {
+  margin: 7vw auto 7vw auto;
+  grid-template-columns: 35% 1fr;
+  gap: 7vw;
+}
+main #section_everyIdea h2 > span:nth-child(1) {
+  flex-direction: row;
+}
+main #section_everyIdea h2 > span:nth-child(1) img {
+  width: 2.5rem;
+  margin-left: 2vw;
+}
+main #lonely-h2 {
+  margin-bottom: 7vw;
+}
+main #section_4steps {
+  gap: 7vw;
+}
+main #section_4steps article {
+  gap: 7vw;
+}
+main #section_4steps article div {
+  gap: 2rem;
+}
+main #section_4steps article div h3 {
+  flex-direction: row;
+  gap: 2rem;
+}
+main #section_4steps article div h3 img {
+  width: 2.5rem;
+}
+main #section_areYouReady {
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  text-align: center;
+  margin: 7vw;
+}
+main #section_areYouReady p {
+  font-size: 1.9rem;
+  margin: auto 7vw auto 7vw;
+}
+main #section_findYourProblem, main #section_designYourProposal {
+  gap: 7vw;
+}
+main #section_findYourProblem div:nth-child(2), main #section_designYourProposal div:nth-child(2) {
+  gap: 1.5rem;
+  justify-content: center;
+}
+main #section_findYourProblem div:nth-child(2) h2, main #section_designYourProposal div:nth-child(2) h2 {
+  color: #dddddd;
+}
+main #section_findYourProblem div:nth-child(2) h3, main #section_designYourProposal div:nth-child(2) h3 {
+  gap: 1rem;
+}
+main #section_findYourProblem div:nth-child(2) p, main #section_designYourProposal div:nth-child(2) p {
+  line-height: 1.8;
+}
+main #section_thinkAboutSolution, main #section_shareYourWork {
+  gap: 7vw;
+}
+main #section_thinkAboutSolution div:nth-child(1), main #section_shareYourWork div:nth-child(1) {
+  gap: 1.5rem;
+  justify-content: center;
+}
+main #section_thinkAboutSolution div:nth-child(1) h2, main #section_shareYourWork div:nth-child(1) h2 {
+  color: #dddddd;
+}
+main #section_thinkAboutSolution div:nth-child(1) h3, main #section_shareYourWork div:nth-child(1) h3 {
+  gap: 1rem;
+}
+main #section_thinkAboutSolution div:nth-child(1) p, main #section_shareYourWork div:nth-child(1) p {
+  line-height: 1.8;
+}
+/* ===================== Footer =========================== */
+footer {
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  text-align: center;
+  margin: 7vw;
+}
+footer p {
+  font-size: 1.9rem;
+  margin: auto 7vw auto 7vw;
+}
+footer #btn {
+  color: #FFF;
+  background-color: #ff3571;
+  padding: 1rem 5rem;
+  margin-top: 7vw;
+}
+footer #btn:hover {
+  background: linear-gradient(to right, #ff3571 20%, #3C30FF);
+}
+
+/* ===================== Smartphones & I-Pads =========================== */
+@media screen and (max-width: 800px) {
+  h1, h2 {
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+  }
+  /* === Header === */
+  header {
+    margin-top: 10vh;
+  }
+  header > img:nth-child(1) {
+    left: 45%;
+  }
+  header #hero {
+    grid-template-columns: 1fr;
+    grid-template-areas: "hero-img" "hero-description";
+  }
+  header #hero article {
+    grid-area: hero-description;
+  }
+  header #hero #img-container_floating-man {
+    grid-area: hero-img;
+    width: 55%;
+    margin-left: auto;
+  }
+  /* === Main === */
+  main #section_everyIdea {
+    grid-template-columns: 1fr;
+  }
+  main #section_4steps {
+    grid-template-columns: 1fr;
+  }
+  main #section_4steps article div h3 {
+    gap: 1rem;
+  }
+  main #section_4steps article div h3 img {
+    width: 4rem;
+  }
+  main #section_4steps article div p {
+    margin-left: 5rem;
+  }
+  main #section_findYourProblem, main #section_designYourProposal {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 0;
+  }
+  main #section_findYourProblem div:nth-child(1), main #section_designYourProposal div:nth-child(1) {
+    width: 60%;
+    margin: auto;
+  }
+  main #section_thinkAboutSolution, main #section_shareYourWork {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 0;
+    grid-template-areas: "picture" "description";
+  }
+  main #section_thinkAboutSolution div:nth-child(1), main #section_shareYourWork div:nth-child(1) {
+    grid-area: description;
+  }
+  main #section_thinkAboutSolution div:nth-child(2), main #section_shareYourWork div:nth-child(2) {
+    grid-area: picture;
+    width: 60%;
+    margin: auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

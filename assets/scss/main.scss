@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* font-family: 'Roboto'; */
+
+@import 'variables';
+@import 'mixins';
+
+
+/* =================== General Styles ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: $font-family;
+  color: $primary-dark-color;
+  max-width: 1400px;
+}
+
+h1 {
+  font-size: $primary-font-size;
+}
+
+h2 {
+  font-size: $h2_font-size;
+}
+
+h3 { font-size: $secondary-font-size;}
+
+p { 
+  font-weight: 300;
+  line-height: 1.8}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+h3 img, p img { width: 3rem; }
+
+a { text-decoration: none; }
+
+
+/* ======================= Classes ==================== */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* =============== Desktop Styles  ==============*/
+
+header {
+  >img:nth-child(1) {
+    width: 55%;
+    margin-left: auto;
+    position: absolute;
+    left: 45%;
+    left: clamp(360px, 45%, 629px);
+    z-index: -1;
+  }
+
+  #logo {
+    grid-template-columns: repeat(2, auto);
+    width: 28rem;
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+  
+    img { 
+      margin: auto;
+      width: 4rem;
+    }
+
+    div { 
+      width: 20rem;
+      
+      p:nth-child(1) { 
+        font-size: $secondary-font-size;
+        font-size: 2.5rem;
+        font-weight: 500;
+        word-spacing: -1px;
+      } 
+      
+      p:nth-child(2) { font-size: $smaller-font-size;
+        font-weight: 400;
+      }
+    }
+  }
+
+  #hero {
+    margin-left: $primary-margin;
+    margin-right: $primary-margin;
+    padding-top: $primary-margin;
+
+    article {
+      justify-content: end;
+      gap: 2.5rem;
+  
+      p { font-size: $secondary-font-size; }
+    }
+
+    #img-container_floating-man { padding-left: 10px; }
+  }
+
+  #scroll-link {
+    color: $primary-red-color;
+    font-size: $smaller-font-size;
+    display: block;
+    margin: $primary-margin;
+  }
+
+  >img:last-of-type { margin-bottom: $primary-margin;}
+}
+
+/* ===================== Main =========================== */
+main {
+  margin-left: $primary-margin;
+  margin-right: $primary-margin;
+  gap: $primary-margin;
+
+  #section_everyIdea {
+    margin: $primary-margin auto $primary-margin auto;
+    grid-template-columns: 35% 1fr;
+    gap: $primary-margin;
+    
+    h2>span:nth-child(1) {
+      flex-direction: row;
+    
+      img { 
+        width: 2.5rem;
+        margin-left: 2vw;
+      }
+    }
+  }
+
+  #lonely-h2 { margin-bottom: $primary-margin;}
+  /* h2 'After several weeks...' */
+  
+  #section_4steps {
+    gap: $primary-margin;
+
+    article {
+      gap: $primary-margin;
+
+      div {
+        gap: 2rem;
+
+        h3 {
+          flex-direction: row;
+          gap: 2rem;
+
+          img { width: 2.5rem; }
+        }
+      }
+    }
+  }
+
+  #section_areYouReady { 
+    @include sections_with_text-center;
+  }
+
+  #section_findYourProblem {
+    gap: $primary-margin;
+
+    div:nth-child(2) {
+      @include div-styling_section_4steps;
+    }
+  }
+
+  #section_thinkAboutSolution {
+    gap: $primary-margin;
+
+    div:nth-child(1) { 
+      @include div-styling_section_4steps;
+    }
+  }
+
+  #section_designYourProposal {
+    @extend #section_findYourProblem;
+  }
+
+  #section_shareYourWork {
+    @extend #section_thinkAboutSolution;
+  }
+}
+
+/* ===================== Footer =========================== */
+footer {
+  @include sections_with_text-center;
+
+    #btn {
+      color: $white-color;
+      background-color: $primary-red-color;
+      padding: 1rem 5rem;
+      margin-top: $primary-margin;
+    }
+
+    #btn:hover { 
+      background: linear-gradient(to right, $primary-red-color 20%, $primary-blue-color);
+    }
+}
+
+
+
+/* ===================== Smartphones & I-Pads =========================== */
+@media screen and (max-width: 800px) {
+  h1, h2 { font-size: $smartphone-font_h1_h2; }
+
+  /* === Header === */
+  header {
+    margin-top: 10vh;
+
+    >img:nth-child(1) { left: 45%; }
+  
+    #hero {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+        'hero-img'
+        'hero-description';
+
+      article { grid-area: hero-description; }
+  
+      #img-container_floating-man {
+          grid-area: hero-img;
+          width: 55%;
+          margin-left: auto;
+      }
+    }
+  }
+
+/* === Main === */
+  main {
+    #section_everyIdea {
+      grid-template-columns: 1fr;
+    }
+
+    #section_4steps {
+      grid-template-columns: 1fr;
+  
+      article div {
+        h3 {
+          gap: 1rem;
+
+          img { width: 4rem; }
+        }
+  
+        p { margin-left: 5rem; }
+      }
+    }
+
+    #section_findYourProblem {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, auto);
+      gap: 0;
+
+      div:nth-child(1) {
+        width: 60%;
+        margin: auto;
+      }
+    }
+
+    #section_thinkAboutSolution {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, auto);
+      gap: 0;
+      grid-template-areas:
+        'picture'
+        'description';
+  
+      div:nth-child(1) { grid-area: description; }
+      
+      div:nth-child(2) {
+        grid-area: picture;
+        width: 60%;
+        margin: auto;
+      }
+    }
+  }
+}
+
+
+
+
+

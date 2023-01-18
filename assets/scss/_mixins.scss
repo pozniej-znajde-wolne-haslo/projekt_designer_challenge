@@ -1,0 +1,21 @@
+@mixin sections_with_text-center {
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  text-align: center;
+  margin: $primary-margin;
+
+  p {
+    font-size: $secondary-font-size;
+    margin: auto $primary-margin auto $primary-margin;
+  }
+}
+
+@mixin div-styling_section_4steps {
+  gap: 1.5rem;
+      justify-content: center;
+
+      h2 { color: $primary-gray-color; }
+      h3 { gap: 1rem; }
+      p { line-height: 1.8;}
+}
