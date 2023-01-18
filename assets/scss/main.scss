@@ -90,10 +90,13 @@ header {
         font-size: 2.5rem;
         font-weight: 500;
         word-spacing: -1px;
+        line-height: 1;
       } 
       
-      p:nth-child(2) { font-size: $smaller-font-size;
+      p:nth-child(2) { 
+        font-size: $smaller-font-size;
         font-weight: 400;
+        line-height: 1;
       }
     }
   }
@@ -198,6 +201,7 @@ main {
 /* ===================== Footer =========================== */
 footer {
   @include sections_with_text-center;
+  padding-top: 8vw;
 
     #btn {
       color: $white-color;
