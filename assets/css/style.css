@@ -67,29 +67,22 @@ header > img:nth-child(1) {
   width: 55%;
   margin-left: auto;
   position: absolute;
-  left: 45%;
   left: clamp(360px, 45%, 629px);
   z-index: -1;
 }
 header #logo {
   grid-template-columns: repeat(2, auto);
-  width: 28rem;
+  width: 24rem;
   position: absolute;
   top: 2rem;
-  left: 1rem;
+  left: 2rem;
 }
 header #logo img {
-  margin: auto;
-  width: 4rem;
-}
-header #logo div {
-  width: 20rem;
+  width: 3.5rem;
 }
 header #logo div p:nth-child(1) {
-  font-size: 1.9rem;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   font-weight: 500;
-  word-spacing: -1px;
   line-height: 1;
 }
 header #logo div p:nth-child(2) {
@@ -105,6 +98,7 @@ header #hero {
 header #hero article {
   justify-content: end;
   gap: 2.5rem;
+  padding-top: 15vh;
 }
 header #hero article p {
   font-size: 1.9rem;
@@ -138,7 +132,7 @@ main #section_everyIdea h2 > span:nth-child(1) {
   flex-direction: row;
 }
 main #section_everyIdea h2 > span:nth-child(1) img {
-  width: 2.5rem;
+  width: 3.5rem;
   margin-left: 2vw;
 }
 main #lonely-h2 {
@@ -220,10 +214,12 @@ footer #btn {
   color: #FFF;
   background-color: #ff3571;
   padding: 1rem 5rem;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
   margin-top: 7vw;
 }
 footer #btn:hover {
   background: linear-gradient(to right, #ff3571 20%, #3C30FF);
+  transform: scale(1.1, 1.1);
 }
 
 /* ===================== Smartphones & I-Pads =========================== */
@@ -232,11 +228,24 @@ footer #btn:hover {
     font-size: clamp(2.4rem, 5vw, 4.2rem);
   }
   /* === Header === */
-  header {
-    margin-top: 10vh;
-  }
   header > img:nth-child(1) {
-    left: 45%;
+    width: 65%;
+    left: 35%;
+  }
+  header #logo {
+    width: 20rem;
+    background-color: rgba(255, 255, 255, 0.45);
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 20%;
+  }
+  header #logo img {
+    width: 3rem;
+  }
+  header #logo div p:nth-child(1) {
+    font-size: 2.1rem;
+  }
+  header #logo div p:nth-child(2) {
+    font-size: 1.2rem;
   }
   header #hero {
     grid-template-columns: 1fr;
@@ -244,15 +253,23 @@ footer #btn:hover {
   }
   header #hero article {
     grid-area: hero-description;
+    padding-top: 0;
   }
   header #hero #img-container_floating-man {
     grid-area: hero-img;
-    width: 55%;
+    width: 62%;
     margin-left: auto;
+  }
+  header #scroll-link {
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
   }
   /* === Main === */
   main #section_everyIdea {
     grid-template-columns: 1fr;
+  }
+  main #section_everyIdea h2 > span:nth-child(1) img {
+    width: 2.5rem;
   }
   main #section_4steps {
     grid-template-columns: 1fr;

@@ -65,31 +65,23 @@ header {
     width: 55%;
     margin-left: auto;
     position: absolute;
-    left: 45%;
     left: clamp(360px, 45%, 629px);
     z-index: -1;
   }
 
   #logo {
     grid-template-columns: repeat(2, auto);
-    width: 28rem;
+    width: 24rem;
     position: absolute;
     top: 2rem;
-    left: 1rem;
+    left: 2rem;
   
-    img { 
-      margin: auto;
-      width: 4rem;
-    }
+    img { width: 3.5rem; }
 
-    div { 
-      width: 20rem;
-      
+    div {
       p:nth-child(1) { 
-        font-size: $secondary-font-size;
-        font-size: 2.5rem;
+        font-size: 2.4rem;
         font-weight: 500;
-        word-spacing: -1px;
         line-height: 1;
       } 
       
@@ -109,6 +101,7 @@ header {
     article {
       justify-content: end;
       gap: 2.5rem;
+      padding-top: 15vh;
   
       p { font-size: $secondary-font-size; }
     }
@@ -123,7 +116,7 @@ header {
     margin: $primary-margin;
   }
 
-  >img:last-of-type { margin-bottom: $primary-margin;}
+  >img:last-of-type { margin-bottom: $primary-margin; }
 }
 
 /* ===================== Main =========================== */
@@ -141,7 +134,7 @@ main {
       flex-direction: row;
     
       img { 
-        width: 2.5rem;
+        width: 3.5rem;
         margin-left: 2vw;
       }
     }
@@ -207,93 +200,16 @@ footer {
       color: $white-color;
       background-color: $primary-red-color;
       padding: 1rem 5rem;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
       margin-top: $primary-margin;
     }
 
     #btn:hover { 
       background: linear-gradient(to right, $primary-red-color 20%, $primary-blue-color);
+      transform: scale(1.1, 1.1);
     }
 }
 
 
 
-/* ===================== Smartphones & I-Pads =========================== */
-@media screen and (max-width: 800px) {
-  h1, h2 { font-size: $smartphone-font_h1_h2; }
-
-  /* === Header === */
-  header {
-    margin-top: 10vh;
-
-    >img:nth-child(1) { left: 45%; }
-  
-    #hero {
-      grid-template-columns: 1fr;
-      grid-template-areas: 
-        'hero-img'
-        'hero-description';
-
-      article { grid-area: hero-description; }
-  
-      #img-container_floating-man {
-          grid-area: hero-img;
-          width: 55%;
-          margin-left: auto;
-      }
-    }
-  }
-
-/* === Main === */
-  main {
-    #section_everyIdea {
-      grid-template-columns: 1fr;
-    }
-
-    #section_4steps {
-      grid-template-columns: 1fr;
-  
-      article div {
-        h3 {
-          gap: 1rem;
-
-          img { width: 4rem; }
-        }
-  
-        p { margin-left: 5rem; }
-      }
-    }
-
-    #section_findYourProblem {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(2, auto);
-      gap: 0;
-
-      div:nth-child(1) {
-        width: 60%;
-        margin: auto;
-      }
-    }
-
-    #section_thinkAboutSolution {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(2, auto);
-      gap: 0;
-      grid-template-areas:
-        'picture'
-        'description';
-  
-      div:nth-child(1) { grid-area: description; }
-      
-      div:nth-child(2) {
-        grid-area: picture;
-        width: 60%;
-        margin: auto;
-      }
-    }
-  }
-}
-
-
-
-
-
+@import 'media_queries'
